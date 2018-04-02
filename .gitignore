@@ -1,2 +1,5 @@
 #Ignore folder named 'Migrations'
 Migrations/
+
+#Ignore folder named ".vs"
+.vs/
