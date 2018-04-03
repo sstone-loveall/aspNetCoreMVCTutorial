@@ -7,12 +7,15 @@
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.All" Version="2.0.6" />
     <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.0.3" />
+    <PackageReference Include="Moq" Version="4.8.2" />
+    <PackageReference Include="NUnit" Version="3.10.1" />
+    <PackageReference Include="NUnit3TestAdapter" Version="3.10.0" />
   </ItemGroup>
 
   <ItemGroup>
     <Folder Include="Tests\ViewModelManagers\" />
-    <Folder Include="Tests\Service\" />
     <Folder Include="Tests\Repository\" />
+    <Folder Include="ViewModelManagers\Account\" />
   </ItemGroup>
 
 </Project>

@@ -8,4 +8,7 @@ C:\Users\sarah.loveall\Development\src\aspNetCoreMVCTutorial\aspNetCoreMVCTutori
 C:\Users\sarah.loveall\Development\src\aspNetCoreMVCTutorial\aspNetCoreMVCTutorial\bin\Debug\netcoreapp2.0\aspNetCoreMVCTutorial.pdb
 C:\Users\sarah.loveall\Development\src\aspNetCoreMVCTutorial\aspNetCoreMVCTutorial\obj\Debug\netcoreapp2.0\aspNetCoreMVCTutorial.dll
 C:\Users\sarah.loveall\Development\src\aspNetCoreMVCTutorial\aspNetCoreMVCTutorial\obj\Debug\netcoreapp2.0\aspNetCoreMVCTutorial.pdb
-C:\Users\sarah.loveall\Development\src\aspNetCoreMVCTutorial\aspNetCoreMVCTutorial\obj\Debug\netcoreapp2.0\aspNetCoreMVCTutorial.csprojResolveAssemblyReference.cache
+C:\Users\sarah.loveall\Development\src\aspNetCoreMVCTutorial\aspNetCoreMVCTutorial\bin\Debug\netcoreapp2.0\NUnit3.TestAdapter.dll
+C:\Users\sarah.loveall\Development\src\aspNetCoreMVCTutorial\aspNetCoreMVCTutorial\bin\Debug\netcoreapp2.0\NUnit3.TestAdapter.pdb
+C:\Users\sarah.loveall\Development\src\aspNetCoreMVCTutorial\aspNetCoreMVCTutorial\bin\Debug\netcoreapp2.0\nunit.engine.netstandard.dll
+C:\Users\sarah.loveall\Development\src\aspNetCoreMVCTutorial\aspNetCoreMVCTutorial\bin\Debug\netcoreapp2.0\Mono.Cecil.dll

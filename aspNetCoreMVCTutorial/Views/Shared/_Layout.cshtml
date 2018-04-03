@@ -1,23 +1,33 @@
-﻿<!DOCTYPE html>
-
+﻿@using Microsoft.AspNetCore.Identity
+<!DOCTYPE html>
+@inject SignInManager<IdentityUser> SignInManager
 <html>
 <head>
     <meta name="viewport" content="width=device-width" />
 	<link href="~/content/bootstrap.css" rel="stylesheet" />
 	<link rel="stylesheet" href="~/content/site.css" />
 </head>
-	<body>
-	<h2>Welcome to the Pie Shop</h2>
+<body>
 	<nav class="navbar navbar-expand-lg navbar-light bg-light">
 		<div class="collapse navbar-collapse" id="navbarSupportedContent">
 			<ul class="navbar-nav mr-auto">
+				<li class="navbar-brand"><b>Tutorial Pie Shop</b></li>
 				<li><a asp-controller="Home" asp-action="Index" class="navbar-brand">Home</a></li>
 				<li><a asp-controller="Feedback" asp-action="Feedback" class="navbar-brand">Feedback</a></li>
+				@if (!SignInManager.IsSignedIn(User))
+				{
+					<li><a asp-controller="Account" asp-action="Register" class="navbar-brand pull-right">Register</a></li>
+					<li><a asp-controller="Account" asp-action="Login" class="navbar-brand pull-right">Login</a></li>
+				}
+				else
+				{
+					<li><a asp-controller="Account" asp-action="Logout" class="navbar-brand pull-right">Logout @User.Identity.Name</a></li>
+				}
 			</ul>
 		</div>
 	</nav>
-    <div class="container body-content">
+	<div class="container body-content">
 		@RenderBody()
-    </div>
+	</div>
 </body>
 </html>

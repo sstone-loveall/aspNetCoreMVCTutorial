@@ -1,4 +1,5 @@
-﻿using aspNetCoreMVCTutorial.Domain;
+﻿using System;
+using aspNetCoreMVCTutorial.Domain;
 using aspNetCoreMVCTutorial.Repository;
 
 namespace aspNetCoreMVCTutorial.Service
@@ -6,6 +7,7 @@ namespace aspNetCoreMVCTutorial.Service
 	public class FeedbackService : IFeedbackService
 	{
 		private IFeedbackRepository _feedbackRepository;
+		private bool _isSaved;
 
 		public FeedbackService(IFeedbackRepository feedbackRepository)
 		{
@@ -15,6 +17,12 @@ namespace aspNetCoreMVCTutorial.Service
 		public void AddFeedback(Feedback feedback)
 		{
 			_feedbackRepository.AddFeedback(feedback);
+			_isSaved = _feedbackRepository.IsSuccess();
+		}
+
+		public Boolean IsSuccess()
+		{
+			return _isSaved;
 		}
 	}
 }

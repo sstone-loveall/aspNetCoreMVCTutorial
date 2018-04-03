@@ -1,10 +1,12 @@
 ﻿using aspNetCoreMVCTutorial.Service;
 using aspNetCoreMVCTutorial.ViewModelManagers.Feedback;
 using aspNetCoreMVCTutorial.ViewModels.Feedback;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace aspNetCoreMVCTutorial.Controllers
 {
+	[Authorize]
 	public class FeedbackController : Controller
 	{
 		private readonly IFeedbackService _feedbackService;

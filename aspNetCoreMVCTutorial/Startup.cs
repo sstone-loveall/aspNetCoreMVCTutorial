@@ -4,6 +4,7 @@ using aspNetCoreMVCTutorial.Service;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -27,7 +28,7 @@ namespace aspNetCoreMVCTutorial
 			AddDependencyInjection(services);
 
 			// DB context initialize
-			services.AddDbContext<AppDbContext>(options => options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
+			InitializeDbContext(services);
 
 			services.AddMvc();
 		}
@@ -40,6 +41,9 @@ namespace aspNetCoreMVCTutorial
 				app.UseDeveloperExceptionPage();
 				app.UseStatusCodePages();
 				app.UseStaticFiles();
+				app.UseAuthentication();
+
+				// configure MVC routes last
 				ConfigureCustomRoutes(app);
 			}
 
@@ -47,6 +51,14 @@ namespace aspNetCoreMVCTutorial
 			{
 				await context.Response.WriteAsync("Hello World!");
 			});
+		}
+
+		public void InitializeDbContext(IServiceCollection services)
+		{
+			services.AddDbContext<AppDbContext>(
+				options => options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
+
+			services.AddIdentity<IdentityUser, IdentityRole>().AddEntityFrameworkStores<AppDbContext>();
 		}
 
 		public void ConfigureCustomRoutes(IApplicationBuilder app)
@@ -66,6 +78,7 @@ namespace aspNetCoreMVCTutorial
 			services.AddTransient<IFeedbackRepository, FeedbackRepository>();
 			services.AddTransient<IPieService, PieService>();
 			services.AddTransient<IFeedbackService, FeedbackService>();
+			services.AddTransient<IAuthenticationService, AuthenticationService>();
 		}
 	}
 }
