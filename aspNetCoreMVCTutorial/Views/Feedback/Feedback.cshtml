@@ -1,0 +1,46 @@
+﻿@model FeedbackViewModel
+@{
+	Layout = "_Layout";
+}
+
+<h2>@Model.Title</h2>
+<form asp-action="Feedback" method="post" class="form-control" role="form">
+	<div asp-validation-summary="All" class="text-danger"></div>
+
+	<div class="form-group">
+		<label asp-for="FeedbackDetails.Name" class="col-md-2 control-label"></label>
+		<div class="col-md-5">
+			<input asp-for="FeedbackDetails.Name" class="form-control" />
+			<span asp-validation-for="FeedbackDetails.Name" class="text-danger"></span>
+		</div>
+	</div>
+
+	<div class="form-group">
+		<label asp-for="FeedbackDetails.Email" class="col-md-2 control-label"></label>
+		<div class="col-md-5">
+			<input asp-for="FeedbackDetails.Email" class="form-control" />
+			<span asp-validation-for="FeedbackDetails.Email" class="text-danger"></span>
+		</div>
+	</div>
+
+	<div class="form-group">
+		<label asp-for="FeedbackDetails.Message" class="col-md-2 control-label"></label>
+		<div class="col-md-5">
+			<textarea asp-for="FeedbackDetails.Message" class="form-control"></textarea>
+			<span asp-validation-for="FeedbackDetails.Message" class="text-danger"></span>
+		</div>
+	</div>
+
+	<div class="form-group">
+		<label asp-for="FeedbackDetails.ContactMe" class="col-md-2 control-label"></label>
+		<div class="col-md-5">
+			<input type="checkbox" asp-for="FeedbackDetails.ContactMe" class="form-control" />
+		</div>
+	</div>
+
+	<div class="form-group">
+		<div class="col-md-offset-2 col-md-5">
+			<input type="submit" class="btn btn-primary" value="Send feedback" />
+		</div>
+	</div>
+</form>

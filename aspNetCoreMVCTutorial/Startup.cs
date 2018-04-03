@@ -24,8 +24,9 @@ namespace aspNetCoreMVCTutorial
 		public void ConfigureServices(IServiceCollection services)
 		{
 			// DI
-			services.AddTransient<IPieRepository, PieRepository>();
-			services.AddTransient<IPieService, PieService>();
+			AddDependencyInjection(services);
+
+			// DB context initialize
 			services.AddDbContext<AppDbContext>(options => options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
 
 			services.AddMvc();
@@ -57,6 +58,14 @@ namespace aspNetCoreMVCTutorial
 					template: "{controller=Home}/{action=Index}/{id?}"
 					);
 			});
+		}
+
+		public void AddDependencyInjection(IServiceCollection services)
+		{
+			services.AddTransient<IPieRepository, PieRepository>();
+			services.AddTransient<IFeedbackRepository, FeedbackRepository>();
+			services.AddTransient<IPieService, PieService>();
+			services.AddTransient<IFeedbackService, FeedbackService>();
 		}
 	}
 }
