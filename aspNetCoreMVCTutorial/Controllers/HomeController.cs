@@ -1,9 +1,7 @@
-﻿using System.Linq;
-using aspNetCoreMVCTutorial.Service;
+﻿using aspNetCoreMVCTutorial.Service;
+using aspNetCoreMVCTutorial.ViewModelManagers.Home;
 using aspNetCoreMVCTutorial.ViewModels.Home;
 using Microsoft.AspNetCore.Mvc;
-
-// For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
 namespace aspNetCoreMVCTutorial.Controllers
 {
@@ -11,22 +9,25 @@ namespace aspNetCoreMVCTutorial.Controllers
 	{
 		private readonly IPieService _pieService;
 
-		// constructor injection
 		public HomeController(IPieService pieService)
 		{
+			// this ctor is an example of constructor injection
 			_pieService = pieService;
 		}
 
-		// GET: /<controller>/
 		public IActionResult Index()
 		{
-			var pies = _pieService.GetAllPies().OrderBy(p => p.Name);
-			var viewModel = new HomeViewModel()
-			{
-				Title = "Welcome to Bethany's Pie Shop",
-				Pies = pies.ToList()
-			};
+			var viewModel = new PieListViewModel();
+			var viewModelMgr = new PieListViewModelManager(_pieService);
+			viewModel = viewModelMgr.BuildViewModel(viewModel);
+			return View(viewModel);
+		}
 
+		public IActionResult Details(int id)
+		{
+			var viewModel = new PieViewModel();
+			var viewModelMgr = new PieDetailsViewModelManager(_pieService);
+			viewModel = viewModelMgr.BuildViewModel(viewModel, id);
 			return View(viewModel);
 		}
 	}

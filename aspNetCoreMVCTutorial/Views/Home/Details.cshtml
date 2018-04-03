@@ -1,0 +1,19 @@
+﻿@model PieViewModel
+
+@{ 
+	Layout = "_Layout";
+}
+
+<h2>@Model.Title</h2>
+
+<div class="thumbnail">
+	<img alt="@Model.PieDetails.Name" src="@Model.PieDetails.ImageUrl">
+	<div class="caption-full">
+		<h3 class="pull-right">@Model.PieDetails.Price</h3>
+		<h3>
+			<a href="#">@Model.PieDetails.Name</a>
+		</h3>
+		<h4>@Model.PieDetails.ShortDescription</h4>
+		<p>@Model.PieDetails.LongDescription</p>
+	</div>
+</div>

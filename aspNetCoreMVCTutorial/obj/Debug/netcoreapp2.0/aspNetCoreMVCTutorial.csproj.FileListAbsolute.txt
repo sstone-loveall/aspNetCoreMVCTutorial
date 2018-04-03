@@ -2,7 +2,6 @@ C:\Users\sarah.loveall\Development\src\aspNetCoreMVCTutorial\aspNetCoreMVCTutori
 C:\Users\sarah.loveall\Development\src\aspNetCoreMVCTutorial\aspNetCoreMVCTutorial\bin\Debug\netcoreapp2.0\aspNetCoreMVCTutorial.runtimeconfig.json
 C:\Users\sarah.loveall\Development\src\aspNetCoreMVCTutorial\aspNetCoreMVCTutorial\bin\Debug\netcoreapp2.0\aspNetCoreMVCTutorial.runtimeconfig.dev.json
 C:\Users\sarah.loveall\Development\src\aspNetCoreMVCTutorial\aspNetCoreMVCTutorial\bin\Debug\netcoreapp2.0\aspNetCoreMVCTutorial.dll
-C:\Users\sarah.loveall\Development\src\aspNetCoreMVCTutorial\aspNetCoreMVCTutorial\obj\Debug\netcoreapp2.0\aspNetCoreMVCTutorial.csprojResolveAssemblyReference.cache
 C:\Users\sarah.loveall\Development\src\aspNetCoreMVCTutorial\aspNetCoreMVCTutorial\obj\Debug\netcoreapp2.0\aspNetCoreMVCTutorial.csproj.CoreCompileInputs.cache
 C:\Users\sarah.loveall\Development\src\aspNetCoreMVCTutorial\aspNetCoreMVCTutorial\obj\Debug\netcoreapp2.0\aspNetCoreMVCTutorial.AssemblyInfoInputs.cache
 C:\Users\sarah.loveall\Development\src\aspNetCoreMVCTutorial\aspNetCoreMVCTutorial\obj\Debug\netcoreapp2.0\aspNetCoreMVCTutorial.AssemblyInfo.cs
