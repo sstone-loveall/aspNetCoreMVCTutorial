@@ -81,6 +81,7 @@ namespace aspNetCoreMVCTutorial
 			services.AddTransient<IPieService, PieService>();
 			services.AddTransient<IFeedbackService, FeedbackService>();
 			services.AddTransient<IAuthenticationService, AuthenticationService>();
+			services.AddTransient<IUserService, UserService>();
 		}
 	}
 }

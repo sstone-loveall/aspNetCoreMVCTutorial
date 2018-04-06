@@ -1,7 +1,6 @@
 ﻿using aspNetCoreMVCTutorial.Service;
 using aspNetCoreMVCTutorial.ViewModels.Account;
 using Microsoft.AspNetCore.Authorization;
-using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 
 namespace aspNetCoreMVCTutorial.Controllers
@@ -9,17 +8,10 @@ namespace aspNetCoreMVCTutorial.Controllers
 	public class AccountController : Controller
 	{
 		private readonly IAuthenticationService _authenticationService;
-		private readonly SignInManager<IdentityUser> _signInManager;
-		private readonly UserManager<IdentityUser> _userManager;
 
-		public AccountController(
-			IAuthenticationService authenticationService,
-			SignInManager<IdentityUser> signInManager,
-			UserManager<IdentityUser> userManager)
+		public AccountController(IAuthenticationService authenticationService)
 		{
 			_authenticationService = authenticationService;
-			_signInManager = signInManager;
-			_userManager = userManager;
 		}
 
 		public IActionResult Login()
