@@ -3,7 +3,7 @@ using System.Linq;
 using aspNetCoreMVCTutorial.Domain;
 using aspNetCoreMVCTutorial.Repository.EntityFramework;
 
-namespace aspNetCoreMVCTutorial.Repository
+namespace aspNetCoreMVCTutorial.Repository.Impl
 {
 	public class PieRepository : IPieRepository
 	{

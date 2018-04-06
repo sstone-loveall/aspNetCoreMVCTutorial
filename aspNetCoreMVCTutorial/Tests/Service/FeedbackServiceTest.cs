@@ -1,6 +1,6 @@
 ﻿using aspNetCoreMVCTutorial.Domain;
 using aspNetCoreMVCTutorial.Repository;
-using aspNetCoreMVCTutorial.Service;
+using aspNetCoreMVCTutorial.Service.Impl;
 using Moq;
 using NUnit.Framework;
 

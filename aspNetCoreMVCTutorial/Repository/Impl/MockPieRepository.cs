@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using aspNetCoreMVCTutorial.Domain;
 
-namespace aspNetCoreMVCTutorial.Repository
+namespace aspNetCoreMVCTutorial.Repository.Impl
 {
 	/// <summary>
 	/// Pluralsight tutorial code

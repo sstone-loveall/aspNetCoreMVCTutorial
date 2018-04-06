@@ -2,7 +2,7 @@
 using aspNetCoreMVCTutorial.Domain;
 using aspNetCoreMVCTutorial.Repository.EntityFramework;
 
-namespace aspNetCoreMVCTutorial.Repository
+namespace aspNetCoreMVCTutorial.Repository.Impl
 {
 	public class FeedbackRepository : IFeedbackRepository
 	{

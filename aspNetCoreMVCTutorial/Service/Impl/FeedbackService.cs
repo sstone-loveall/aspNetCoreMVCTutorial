@@ -2,7 +2,7 @@
 using aspNetCoreMVCTutorial.Domain;
 using aspNetCoreMVCTutorial.Repository;
 
-namespace aspNetCoreMVCTutorial.Service
+namespace aspNetCoreMVCTutorial.Service.Impl
 {
 	public class FeedbackService : IFeedbackService
 	{

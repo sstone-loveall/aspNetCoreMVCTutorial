@@ -1,6 +1,8 @@
 ﻿using aspNetCoreMVCTutorial.Repository;
 using aspNetCoreMVCTutorial.Repository.EntityFramework;
+using aspNetCoreMVCTutorial.Repository.Impl;
 using aspNetCoreMVCTutorial.Service;
+using aspNetCoreMVCTutorial.Service.Impl;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;

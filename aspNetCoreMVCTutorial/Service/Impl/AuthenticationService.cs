@@ -2,7 +2,7 @@
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Identity;
 
-namespace aspNetCoreMVCTutorial.Service
+namespace aspNetCoreMVCTutorial.Service.Impl
 {
 	public class AuthenticationService : IAuthenticationService
 	{
